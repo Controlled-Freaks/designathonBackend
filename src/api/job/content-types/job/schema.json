@@ -37,6 +37,18 @@
       "relation": "manyToOne",
       "target": "api::department.department",
       "inversedBy": "job"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "jobs"
+    },
+    "tags": {
+      "type": "enumeration",
+      "enum": [
+        "job"
+      ]
     }
   }
 }

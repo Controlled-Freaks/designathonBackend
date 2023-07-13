@@ -15,23 +15,22 @@
     "departmentName": {
       "type": "string"
     },
-    "departmentId": {
-      "type": "biginteger"
-    },
     "employees": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::employee.employee",
       "mappedBy": "department"
     },
-    "departmentName": {
-      "type": "string"
-    },
     "job": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job.job",
       "mappedBy": "department"
+    },
+    "departmentId": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
     }
   }
 }

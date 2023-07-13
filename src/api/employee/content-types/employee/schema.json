@@ -39,12 +39,6 @@
       "required": true,
       "unique": true
     },
-    "department": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::department.department",
-      "inversedBy": "departmentId"
-    },
     "network": {
       "type": "relation",
       "relation": "oneToOne",
@@ -68,6 +62,18 @@
       "relation": "oneToMany",
       "target": "api::employee-reward.employee-reward",
       "mappedBy": "employee"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job.job",
+      "mappedBy": "employee"
+    },
+    "department": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::department.department",
+      "inversedBy": "employees"
     }
   }
 }
