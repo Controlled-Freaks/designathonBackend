@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jobId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "jobTitle": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "jobDescription": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "openings": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "department": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::department.department",
+      "inversedBy": "job"
+    }
+  }
+}

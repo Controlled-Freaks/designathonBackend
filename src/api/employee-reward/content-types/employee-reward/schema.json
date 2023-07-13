@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employee_rewards",
+  "info": {
+    "singularName": "employee-reward",
+    "pluralName": "employee-rewards",
+    "displayName": "EmployeeRewards",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employeeRewardId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "employee_rewards"
+    },
+    "rewards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reward.reward",
+      "mappedBy": "employee_reward"
+    }
+  }
+}

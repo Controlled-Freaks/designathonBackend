@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "referrals",
+  "info": {
+    "singularName": "referral",
+    "pluralName": "referrals",
+    "displayName": "Referral",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "referralId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "referred_by": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "referrals"
+    },
+    "candidate": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::candidate.candidate"
+    },
+    "job": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job.job"
+    },
+    "referral_status": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::referral-status.referral-status"
+    }
+  }
+}

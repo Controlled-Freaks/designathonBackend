@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "networks",
+  "info": {
+    "singularName": "network",
+    "pluralName": "networks",
+    "displayName": "Network",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "network"
+    },
+    "name": {
+      "type": "string",
+      "unique": true
+    },
+    "network": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::candidate.candidate",
+      "mappedBy": "candidate"
+    }
+  }
+}

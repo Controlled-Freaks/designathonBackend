@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "referral_statuses",
+  "info": {
+    "singularName": "referral-status",
+    "pluralName": "referral-statuses",
+    "displayName": "ReferralStatus"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "referralId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "referralStatus": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
