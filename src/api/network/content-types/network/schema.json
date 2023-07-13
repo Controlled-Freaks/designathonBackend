@@ -22,11 +22,11 @@
       "type": "string",
       "unique": true
     },
-    "network": {
+    "candidate": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::candidate.candidate",
-      "mappedBy": "candidate"
+      "mappedBy": "network"
     }
   }
 }

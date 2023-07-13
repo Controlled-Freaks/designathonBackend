@@ -63,12 +63,6 @@
       "target": "api::employee-reward.employee-reward",
       "mappedBy": "employee"
     },
-    "jobs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::job.job",
-      "mappedBy": "employee"
-    },
     "department": {
       "type": "relation",
       "relation": "manyToOne",

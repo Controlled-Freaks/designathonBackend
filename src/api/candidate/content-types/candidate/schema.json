@@ -4,7 +4,8 @@
   "info": {
     "singularName": "candidate",
     "pluralName": "candidates",
-    "displayName": "Candidate"
+    "displayName": "Candidate",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,7 +14,7 @@
   "attributes": {
     "candidateId": {
       "type": "string",
-      "required": true,
+      "required": false,
       "unique": true
     },
     "firstName": {
@@ -35,18 +36,18 @@
       "required": true
     },
     "resume": {
-      "allowedTypes": [
-        "files"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
     },
-    "candidate": {
+    "network": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::network.network",
-      "inversedBy": "network"
+      "inversedBy": "candidate"
     }
   }
 }
