@@ -4,21 +4,25 @@
   "info": {
     "singularName": "department",
     "pluralName": "departments",
-    "displayName": "Department"
+    "displayName": "Department",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "departmentName": {
+      "type": "string"
+    },
     "departmentId": {
+      "type": "biginteger"
+    },
+    "employees": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::employee.employee",
       "mappedBy": "department"
-    },
-    "departmentName": {
-      "type": "string"
     }
   }
 }
