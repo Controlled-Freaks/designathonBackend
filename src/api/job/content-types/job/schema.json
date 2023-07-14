@@ -72,6 +72,9 @@
     "jobRequirements": {
       "type": "richtext",
       "required": true
+    },
+    "jobExperience": {
+      "type": "integer"
     }
   }
 }
