@@ -74,7 +74,7 @@
       "required": true
     },
     "jobExperience": {
-      "type": "integer"
+      "type": "string"
     }
   }
 }
