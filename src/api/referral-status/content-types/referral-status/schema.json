@@ -4,7 +4,8 @@
   "info": {
     "singularName": "referral-status",
     "pluralName": "referral-statuses",
-    "displayName": "ReferralStatus"
+    "displayName": "ReferralStatus",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +20,7 @@
     "referralStatus": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     }
   }
 }

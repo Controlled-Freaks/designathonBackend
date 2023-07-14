@@ -25,9 +25,9 @@
     },
     "rewards": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::reward.reward",
-      "mappedBy": "employee_reward"
+      "mappedBy": "employee_rewards"
     }
   }
 }
