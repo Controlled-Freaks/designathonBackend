@@ -17,11 +17,6 @@
       "required": true,
       "unique": true
     },
-    "jobDescription": {
-      "type": "text",
-      "required": true,
-      "unique": true
-    },
     "openings": {
       "type": "integer",
       "required": true,
@@ -47,10 +42,6 @@
       "type": "string",
       "required": true
     },
-    "jobRequirements": {
-      "type": "text",
-      "required": true
-    },
     "jobType": {
       "type": "enumeration",
       "enum": [
@@ -73,6 +64,14 @@
     },
     "salaryRange": {
       "type": "string"
+    },
+    "jobDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "jobRequirements": {
+      "type": "richtext",
+      "required": true
     }
   }
 }
