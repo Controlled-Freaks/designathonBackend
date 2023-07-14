@@ -36,4 +36,12 @@ const bootstrap = (app) => {
 export default {
   config,
   bootstrap,
+  translations: {
+    en: {
+    "app.components.LeftMenu.navbrand.title": "Hexa Employee Referral",
+    "Auth.form.welcome.subtitle": "Welcome to Hexa Employee Referral",
+    "Auth.form.welcome.title": "Welcome!",
+    },
+    
+    },
 };
