@@ -42,6 +42,37 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag"
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "jobRequirements": {
+      "type": "text",
+      "required": true
+    },
+    "jobType": {
+      "type": "enumeration",
+      "enum": [
+        "Full-time",
+        "Part-time",
+        "Contract",
+        "Internship",
+        "Temporary"
+      ],
+      "required": true
+    },
+    "workType": {
+      "type": "enumeration",
+      "enum": [
+        "remote",
+        "in-office",
+        "hybrid"
+      ],
+      "required": true
+    },
+    "salaryRange": {
+      "type": "string"
     }
   }
 }
